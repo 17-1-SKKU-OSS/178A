@@ -1,15 +1,189 @@
 <!DOCTYPE HTML>
 <meta charset="utf-8">
 <html>
-		<head>
-					<title>178A</title>
-						</head>
-							<body>
-										<h1>178A</h1>
-												<br>
-														<h1>팀원: 김이곤, 신재민, 황준원</h1>
-																<h1>팀 소개</h1>
-																		<h1>잡탕팀입니다.</h1>
-																			</body>
+	<head>
+		<style type="text/css">
+			body{
+				margin: 0px;
+			}
+			hr{
+				margin-left: 40px;
+				margin-right: 40px;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				/*border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;*/
+				border-bottom-color: #ACACAC;
+			}
+			ul{
+				list-style: none;
+				padding: 20px 20px 20px 20px;
+			}
+			li{
+				float: left;
+				border-left-color: #BABADA;
+				border-left-width: medium;
+				border-left-style: solid;
+				margin: 0px 10px 0px 20px;
+				padding: 0px 0px 0px 10px;
+				font-size: 20px;
+				font-weight: bold;
+				color: #808080;
+			}
+			td{
+				padding: 3px 0px 2px 10px;
+			}
+			#team_name{
+				text-align: center;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				background: linear-gradient(120deg, #FAE258, #F29F21);
+			}
+			#title{
+				color: #FFFFFF;
+				font-size: 50px;
+			}
+			#subtitle{
+				animation-name: blink;
+				animation-duration: 6s;
+				animation-direction: alternate;
+				animation-iteration-count: infinite;
+				font-size: 20px;
+				font-weight: normal;
+				color: #FAFAFA;
+			}
+			#main{
+				padding-left: 50px;
+				padding-right: 50px;
+				padding-top: 30px;
+			}
+			#team_member{
+				align-items: flex-end;
+				text-align: right;
+			}
+			#member_list{
+				text-align: right;
+				animation-duration: 2s;
+				animation-name: slide;
+				/*animation-iteration-count: infinite;*/
+				animation-direction: normal;
+			}
+			@keyframes slide {
+				from{
+					margin-left: 90%;
+					width: 300%;
+				}
+				to{
+					margin-left: 0px;
+					width: 100%;
+				}
+			}
+			@keyframes expand {
+				from{
+					word-spacing: normal;
+				}
+				to{
+					word-spacing: 10px;
+				}
+			}
+			@keyframes blink {
+				from{
+					opacity: 1;
+				}
+				30%{
+					opacity: 1;
+				}
+				50%{
+					opacity: 0;
+				}
+				70%{
+					opacity: 1;
+				}
+				to{
+					opacity: 1;
+				}
+			}
+			#team_introduction{
+				margin: 30px 0px 0px 0px;
+				background-color: #EEEEEE;
+			}
+			#main_title{
+				text-align: center;
+				color: #4C4C4C;
+				margin: 10px;
+				padding-top: 40px;
+			}
+			#main_title:hover{
+				animation-name: expand;
+				animation-duration: 1s;
+			}
+			#main_content{
+				margin: 30px;
+				padding-top: 10px;
+				padding-bottom: 100px;
+			}
+			#history_title{
+				text-align: center;
+				color: #5C5C5C;
+			}
+			#history_title:hover{
+				animation-name: expand;
+				animation-duration: 1s;
+			}
+			#history_log{
+				padding: 0px 0px 0px 15px;
+				border-left-color: #BABADA;
+				border-left-width: medium;
+				border-left-style: solid;
+			}
+			h3{
+				color: #808080;
+			}
+		</style>
+		<!--<script type="text/javascript">
+			function intro_mon(){
+				var e=document.getElementById("main_title");
+				e.className("expand");
+			}
+			function intro_mout(){
+				var e=document.getElementById("main_title");
+				e.className("condense");
+			}
+		</script>-->
+		<title>178A</title>
+	</head>
+	<body>
+		<section id="team_name">
+			<h1 id="title">178A</h1>
+			<h2 id="subtitle">SKKU OSS team 178A in 2017</h2>
+		</section>
+		<div id="main">
+			<div id="team_member">
+				<ul id="member_list">
+					<li style="margin-right: 50px;">Member<li>
+					<li class="member_name">김이곤</li>
+					<li class="member_name">신재민</li>
+					<li class="member_name">황준원</li>
+				</ul>
+			</div>
+			<div id="team_introduction">
+				<h2 id="main_title">{&nbsp;Introduction&nbsp;}</h2>
+				<hr />
+				<h3 id="main_content">잡탕팀입니다.</h3>
+			</div>
+			<div>
+				<h1 id="history_title"><&nbsp;History&nbsp;></h1>
+				<table id="history_log">
+					<tr>
+						<td style="font-weight: bold;">2017.5.2</td>
+						<td>Create Github Page &amp; Repository</td>
+					</tr>
+					<tr>
+						<td style="font-weight: bold;">2017.5.5</td>
+						<td>Design Github Page</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
 </html>
-	
