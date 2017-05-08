@@ -63,19 +63,27 @@
 			}
 			#member_list{
 				text-align: right;
-				animation-duration: 2s;
+				animation-duration: 6s;
 				animation-name: slide;
-				/*animation-iteration-count: infinite;*/
+				animation-iteration-count: infinite;
 				animation-direction: normal;
 			}
 			@keyframes slide {
 				from{
 					margin-left: 90%;
 					width: 300%;
+					opacity: 1;
 				}
-				to{
+				30%{
 					margin-left: 0px;
 					width: 100%;
+					opacity: 1;
+				}
+				70%{
+					opacity: 1;
+				}
+				to{
+					opacity: 0;
 				}
 			}
 			@keyframes expand {
