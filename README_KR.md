@@ -90,57 +90,57 @@
    " Put your non-Plugin stuff after this line
    ```
 
-4. Install Plugins:
+4. 플러그인 설치:
 
-   Launch `vim` and run `:PluginInstall`
+   `vim`을 켠 후 `:PluginInstall`을 실행하세요
 
-   To install from command line: `vim +PluginInstall +qall`
+   명령줄에서 설치: `vim +PluginInstall +qall`
 
-5. (optional) For those using the fish shell: add `set shell=/bin/bash` to your `.vimrc`
+5. (선택) fish shell 사용시: `.vimrc`내에 `set shell=/bin/bash`을 추가하세요
 
-## Docs
+## 문서
 
-See the [`:h vundle`](https://github.com/VundleVim/Vundle.vim/blob/master/doc/vundle.txt) Vimdoc for more details.
+더 자세한 내용은 [`:h vundle`](https://github.com/VundleVim/Vundle.vim/blob/master/doc/vundle.txt) 문서를 참조하세요.
 
-## Changelog
+## 변경기록
 
-See the [changelog](https://github.com/VundleVim/Vundle.vim/blob/master/changelog.md).
+[변경기록](https://github.com/VundleVim/Vundle.vim/blob/master/changelog.md)을 확인하세요.
 
-## People Using Vundle
+## Vundle을 사용하는 사람들
 
-see [Examples](https://github.com/VundleVim/Vundle.vim/wiki/Examples)
+[예시](https://github.com/VundleVim/Vundle.vim/wiki/Examples)를 확인하세요.
 
-## Contributors
+## 기여자
 
-see [Vundle contributors](https://github.com/VundleVim/Vundle.vim/graphs/contributors)
+[Vundle 기여자 명단](https://github.com/VundleVim/Vundle.vim/graphs/contributors)을 확인하세요.
 
-*Thank you!*
+*감사합니다!*
 
-## Inspiration & Ideas
+## 아이디어 및 영감
 
 * [pathogen.vim](http://github.com/tpope/vim-pathogen/)
 * [Bundler](https://github.com/bundler/bundler)
 * [Scott Bronson](http://github.com/bronson)
 
-## Also
+## 기타
 
-* Vundle was developed and tested with [Vim] 7.3 on OS X, Linux and Windows
-* Vundle tries to be as [KISS](http://en.wikipedia.org/wiki/KISS_principle) as possible
+* Vundle은 [Vim] 버젼 7.3으로 OS X, Linux 및 Windows에서 개발 및 테스트 되었습니다.
+* Vundle은 최대한 [KISS](http://en.wikipedia.org/wiki/KISS_principle) 원칙을 준수합니다.
 
-## TODO:
-[Vundle] is a work in progress, so any ideas and patches are appreciated.
+## 할일:
+[Vundle]은 현재 개발이 진행 중 입니다. 그러니 어떤 아이디어이든 개선점이든 알려주시면 감사하겠습니다.
 
-* [x] activate newly added bundles on `.vimrc` reload or after `:PluginInstall`
-* [x] use preview window for search results
-* [x] Vim documentation
-* [x] put Vundle in `bundles/` too (will fix Vundle help)
-* [x] tests
-* [x] improve error handling
-* [ ] allow specifying revision/version?
-* [ ] handle dependencies
-* [ ] show description in search results
-* [ ] search by description as well
-* [ ] make it rock!
+* [x] `:PluginInstall`을 실행하거나 재실행 하였을 때 새로 추가된 플러그인들을 `.vimrc`에 새롭게 추가하는 기능 활성화
+* [x] 미리보기 창에 검색 결과 띄우기
+* [x] Vim 문서 작성
+* [x] `bundles/`에 Vundle넣기 (Vundle 도움말이 수정됨)
+* [x] 테스트
+* [x] 에러 관리 개선
+* [ ] 각 수정 및 버전의 명시를 가능하게?
+* [ ] 의존성 관리
+* [ ] 검색 결과에 설명 보여주기
+* [ ] 설명으로 검색하기
+* [ ] 존나 쩔게 만들기!
 
 [Vundle]:http://github.com/VundleVim/Vundle.vim
 [Windows setup]:https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
