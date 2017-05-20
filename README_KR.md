@@ -1,48 +1,49 @@
-## [Help Maintain Vundle](https://github.com/VundleVim/Vundle.vim/issues/383)
+## [Vundle 유지 / 보수하기](https://github.com/VundleVim/Vundle.vim/issues/383)
 
-## About
+## 소개
 
-[Vundle] is short for _Vim bundle_ and is a [Vim] plugin manager.
+[Vundle] 은 _Vim bundle_ 의 약자로 [Vim] 플러그인 매니저입니다.
 
-[Vundle] allows you to...
+[Vundle] 은 다음 기능들을 제공합니다...
 
-* keep track of and [configure] your plugins right in the `.vimrc`
-* [install] configured plugins (a.k.a. scripts/bundle)
-* [update] configured plugins
-* [search] by name all available [Vim scripts]
-* [clean] unused plugins up
-* run the above actions in a *single keypress* with [interactive mode]
+* `.vimrc`에 직접 플러그인들의 기록을 남기고 [환경설정]하기
+* 플러그인들을 [설치]하기 (scripts/bundle 와 같음)
+* 플러그인들을 [업데이트]하기
+* [Vim scripts]의 모든 내용을 [검색]하기
+* 사용하지 않는 플러그인들을 [삭제]하기
+* [interactive mode]에서 위 기능들을 *하나의 키* 로 실행하기
 
-[Vundle] automatically...
+[Vundle]은 자동으로...
 
-* manages the [runtime path] of your installed scripts
-* regenerates [help tags] after installing and updating
+* 설치된 스크립트들의 [runtime path]를 관리합니다
+* 설치 및 업데이트 후 [도움말 태그]를 재생성합니다
 
-[Vundle] is undergoing an [interface change], please stay up to date to get latest changes.
+[Vundle]은 현재 [인터페이스 수정] 중이며, 따라서 항상 최신 프로그램으로 업데이트하기를 권장합니다. 
 
-[![Gitter-chat](https://badges.gitter.im/VundleVim/Vundle.vim.svg)](https://gitter.im/VundleVim/Vundle.vim) for discussion and support.
+토론 및 지원 : [![Gitter-chat](https://badges.gitter.im/VundleVim/Vundle.vim.svg)](https://gitter.im/VundleVim/Vundle.vim) 
 
 ![Vundle-installer](http://i.imgur.com/Rueh7Cc.png)
 
-## Quick Start
+## 빠른 시작
 
-1. Introduction:
+1. 시작하기:
 
-   Installation requires [Git] and triggers [`git clone`] for each configured repository to `~/.vim/bundle/` by default.
-   Curl is required for search.
+   Vundle을 설치하기 위해선 [Git]이 필요합니다.
+   설치 과정에서 각각의 저장소를 `~/.vim/bundle/` 경로에 기본값으로 [`git clone`]합니다. 
+   검색 기능을 위해 Curl이 필요합니다. 
 
-   If you are using Windows, go directly to [Windows setup]. If you run into any issues, please consult the [FAQ].
-   See [Tips] for some advanced configurations.
+   Windows 사용자라면, [윈도우에서 설치] 문서를 참조하십시오. 만약 어떤 문제라도 발생한다면, [자주 묻는 질문]에 도움을 요청하십시오. 
+   좀 더 나은 환경설정을 위해 [도움말]을 참조하십시오. 
 
-   Using non-POSIX shells, such as the popular Fish shell, requires additional setup. Please check the [FAQ].
+   Fish shell과 같은 non-POSIX shell을 사용한다면, 추가적인 설치가 필요합니다. [자주 묻는 질문]을 확인하십시오. 
 
-2. Set up [Vundle]:
+2. [Vundle] 설치하기:
 
    `$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
-3. Configure Plugins:
+3. 플러그인 설정하기:
 
-   Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't need, they are for illustration purposes.
+   Vundle을 사용하기 위해 다음을 `.vimrc` 파일의 첫 줄에 붙여넣으십시오. 필요 없는 플러그인들을 삭제하십시오. 그들은 설명을 위한 것입니다. 
 
    ```vim
    set nocompatible              " be iMproved, required
@@ -143,21 +144,21 @@
 * [ ] 존나 쩔게 만들기!
 
 [Vundle]:http://github.com/VundleVim/Vundle.vim
-[Windows setup]:https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
-[FAQ]:https://github.com/VundleVim/Vundle.vim/wiki
-[Tips]:https://github.com/VundleVim/Vundle.vim/wiki/Tips-and-Tricks
+[윈도우에서 설치]:https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
+[자주 묻는 질문]:https://github.com/VundleVim/Vundle.vim/wiki
+[도움말]:https://github.com/VundleVim/Vundle.vim/wiki/Tips-and-Tricks
 [Vim]:http://www.vim.org
 [Git]:http://git-scm.com
 [`git clone`]:http://gitref.org/creating/#clone
 
 [Vim scripts]:http://vim-scripts.org/vim/scripts.html
-[help tags]:http://vimdoc.sourceforge.net/htmldoc/helphelp.html#:helptags
+[도움말 태그]:http://vimdoc.sourceforge.net/htmldoc/helphelp.html#:helptags
 [runtime path]:http://vimdoc.sourceforge.net/htmldoc/options.html#%27runtimepath%27
 
-[configure]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L126-L233
-[install]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L234-L254
-[update]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L255-L265
-[search]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L266-L295
-[clean]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L303-L318
+[환경설정]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L126-L233
+[설치]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L234-L254
+[업데이트]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L255-L265
+[검색]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L266-L295
+[삭제]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L303-L318
 [interactive mode]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L319-L360
-[interface change]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L372-L396
+[인터페이스 수정]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L372-L396
