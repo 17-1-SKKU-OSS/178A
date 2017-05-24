@@ -1,0 +1,11 @@
+install - 설치
+update - 업데이트
+search - 검색
+clean - 정리
+runtime path - runtime 경로
+interactive mode - interactive 모드
+Windows setup - 윈도우에서 설치
+FAQ - 자주 묻는 질문
+Tips - 도움말
+
+command line - 명령줄
