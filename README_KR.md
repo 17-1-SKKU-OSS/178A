@@ -18,7 +18,7 @@
 * 설치된 스크립트들의 [runtime 경로]를 관리합니다
 * 설치 및 업데이트 후 [도움말 태그]를 재생성합니다
 
-[Vundle]은 현재 [인터페이스 수정] 중이며, 따라서 항상 최신 프로그램으로 업데이트하기를 권장합니다. 
+[Vundle]은 현재 [인터페이스 수정] 중 입니다. 최신 변경 사항을 적용하기위해 항상 최신 상태로 유지하십시오. 
 
 토론 및 지원 : [![Gitter-chat](https://badges.gitter.im/VundleVim/Vundle.vim.svg)](https://gitter.im/VundleVim/Vundle.vim) 
 
@@ -43,7 +43,7 @@
 
 3. 플러그인 설정하기:
 
-   Vundle을 사용하기 위해 다음을 `.vimrc` 파일의 첫 줄에 붙여넣으십시오. 필요 없는 플러그인들을 삭제하십시오. 이것은 예시입니다. 
+   Vundle을 사용하기 위해 다음을 `.vimrc` 파일의 첫 줄에 붙여넣으십시오. 필요 없는 플러그인들을 삭제하십시오. 다음은 예시입니다. 
 
    ```vim
    set nocompatible              " be iMproved, required
@@ -93,27 +93,27 @@
 
 4. 플러그인 설치:
 
-   `vim`을 켠 후 `:PluginInstall`을 실행하세요
+   `vim`을 켠 후 `:PluginInstall`을 실행하십시오.
 
    명령줄에서 설치: `vim +PluginInstall +qall`
 
-5. (선택) fish shell 사용시: `.vimrc`내에 `set shell=/bin/bash`을 추가하세요
+5. (선택) fish shell 사용시: `.vimrc`내에 `set shell=/bin/bash`을 추가하십시오.
 
 ## 문서
 
-더 자세한 내용은 [`:h vundle`](https://github.com/VundleVim/Vundle.vim/blob/master/doc/vundle.txt) 문서를 참조하세요.
+더 자세한 내용은 [`:h vundle`](https://github.com/VundleVim/Vundle.vim/blob/master/doc/vundle.txt) 문서를 참조하십시오.
 
-## 변경기록
+## 변경 로그
 
-[변경기록](https://github.com/VundleVim/Vundle.vim/blob/master/changelog.md)을 확인하세요.
+[변경 로그](https://github.com/VundleVim/Vundle.vim/blob/master/changelog.md)을 확인하십시오.
 
 ## Vundle을 사용하는 사람들
 
-[예시](https://github.com/VundleVim/Vundle.vim/wiki/Examples)를 확인하세요.
+[예시](https://github.com/VundleVim/Vundle.vim/wiki/Examples)를 확인하십시오.
 
 ## 기여자
 
-[Vundle 기여자 명단](https://github.com/VundleVim/Vundle.vim/graphs/contributors)을 확인하세요.
+[Vundle 기여자 명단](https://github.com/VundleVim/Vundle.vim/graphs/contributors)을 확인하십시오.
 
 *감사합니다!*
 
@@ -160,5 +160,5 @@
 [업데이트]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L255-L265
 [검색]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L266-L295
 [정리]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L303-L318
-[interactive mode]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L319-L360
+[interactive 모드]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L319-L360
 [인터페이스 수정]:https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L372-L396
