@@ -18,9 +18,9 @@
 * 설치된 스크립트들의 [runtime 경로]를 관리합니다
 * 설치 및 업데이트 후 [도움말 태그]를 재생성합니다
 
-[Vundle]은 현재 [인터페이스 수정] 중 입니다. 최신 변경 사항을 적용하기위해 항상 최신 상태로 유지하십시오. 
+[Vundle]은 현재 [인터페이스 수정] 중 입니다. 최신 변경 사항을 적용하기위해 항상 최신 상태로 유지하십시오.
 
-토론 및 지원 : [![Gitter-chat](https://badges.gitter.im/VundleVim/Vundle.vim.svg)](https://gitter.im/VundleVim/Vundle.vim) 
+토론 및 지원 : [![Gitter-chat](https://badges.gitter.im/VundleVim/Vundle.vim.svg)](https://gitter.im/VundleVim/Vundle.vim)
 
 ![Vundle-installer](http://i.imgur.com/Rueh7Cc.png)
 
@@ -29,13 +29,13 @@
 1. 시작하기:
 
    Vundle을 설치하기 위해선 [Git]이 필요합니다.
-   설치 과정에서 각각의 저장소를 `~/.vim/bundle/` 경로에 기본값으로 [`git clone`]합니다. 
-   검색 기능을 위해 Curl이 필요합니다. 
+   설치 과정에서 각각의 저장소를 `~/.vim/bundle/` 경로에 기본값으로 [`git clone`]합니다.
+   검색 기능을 위해 Curl이 필요합니다.
 
-   Windows 사용자라면, [윈도우에서 설치] 문서를 참조하십시오. 만약 어떤 문제라도 발생한다면, [자주 묻는 질문]에 도움을 요청하십시오. 
-   좀 더 나은 환경설정을 위해 [도움말]을 참조하십시오. 
+   Windows 사용자라면, [윈도우에서 설치] 문서를 참조하십시오. 만약 어떤 문제라도 발생한다면, [자주 묻는 질문]에 도움을 요청하십시오.
+   좀 더 나은 환경설정을 위해 [도움말]을 참조하십시오.
 
-   Fish shell과 같은 non-POSIX shell을 사용한다면, 추가적인 설치가 필요합니다. [자주 묻는 질문]을 확인하십시오. 
+   Fish shell과 같은 non-POSIX shell을 사용한다면, 추가적인 설치가 필요합니다. [자주 묻는 질문]을 확인하십시오.
 
 2. [Vundle] 설치하기:
 
@@ -43,52 +43,52 @@
 
 3. 플러그인 설정하기:
 
-   Vundle을 사용하기 위해 다음을 `.vimrc` 파일의 첫 줄에 붙여넣으십시오. 필요 없는 플러그인들을 삭제하십시오. 다음은 예시입니다. 
+   Vundle을 사용하기 위해 다음을 `.vimrc` 파일의 첫 줄에 붙여넣으십시오. 필요 없는 플러그인들을 삭제하십시오. 다음은 예시입니다.
 
    ```vim
-   set nocompatible              " be iMproved, required
-   filetype off                  " required
+   set nocompatible              " Vi와 호환하지 않는다면, 필수 항목
+   filetype off                  " 필수 항목
 
-   " set the runtime path to include Vundle and initialize
+   " Vundle 을 포함한 runtime 경로를 설정하고 초기화
    set rtp+=~/.vim/bundle/Vundle.vim
    call vundle#begin()
-   " alternatively, pass a path where Vundle should install plugins
+   " Vundle이 플러그인을 설치할 경로를 바꾸지 않았다면, 생략할 수 있습니다
    "call vundle#begin('~/some/path/here')
 
-   " let Vundle manage Vundle, required
+   " Vundle이 스스로를 관리하도록 설정, 필수 항목
    Plugin 'VundleVim/Vundle.vim'
 
-   " The following are examples of different formats supported.
-   " Keep Plugin commands between vundle#begin/end.
-   " plugin on GitHub repo
+   " 아래는 지원되는 여러 형식들의 예시입니다
+   " 플러그인 명령어를 vundle#begin/end 사이에 추가하십시오
+   " GitHub 저장소에 있는 플러그인
    Plugin 'tpope/vim-fugitive'
-   " plugin from http://vim-scripts.org/vim/scripts.html
-   " Plugin 'L9'
-   " Git plugin not hosted on GitHub
+   " http://vim-scripts.org/vim/scripts.html 에 있는 플러그인
+   " 'L9' 플러그인
+   " GitHub에 호스트 되어있지 않는 Git 플러그인
    Plugin 'git://git.wincent.com/command-t.git'
-   " git repos on your local machine (i.e. when working on your own plugin)
+   " 사용하는 기기의 git 저장소 ( 당신만의 플러그인을 사용할 때 )
    Plugin 'file:///home/gmarik/path/to/plugin'
-   " The sparkup vim script is in a subdirectory of this repo called vim.
-   " Pass the path to set the runtimepath properly.
+   " 이 sparkup vim script 는 이 저장소의 vim 이란 이름의 하위 디렉토리 내부에 있습니다
+   " 적절한 runtime 경로를 설정하기 위해선 생략하십시오
    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-   " Install L9 and avoid a Naming conflict if you've already installed a
-   " different version somewhere else.
-   " Plugin 'ascenator/L9', {'name': 'newL9'}
+   " L9를 설치하고, 만약 당신이 다른 버전을 어딘가 설치했을 경우 충돌 문제를 방지합니다
+   Plugin 'ascenator/L9', {'name': 'newL9'}
 
-   " All of your Plugins must be added before the following line
-   call vundle#end()            " required
-   filetype plugin indent on    " required
-   " To ignore plugin indent changes, instead use:
+   " 당신의 모든 플러그인은 아래 명령어 이전에 추가되어야 합니다
+   call vundle#end()            " 필수 항목
+   filetype plugin indent on    " 필수 항목
+   " 플러그인의 들여쓰기 변화를 무시하려면, 대신 이 명령어를 사용하십시오:
    "filetype plugin on
    "
-   " Brief help
-   " :PluginList       - lists configured plugins
-   " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-   " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-   " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+   " 간단한 도움말
+   " :PluginList       - 설정된 플러그인의 리스트
+   " :PluginInstall    - 플러그인 설치; `!`를 뒤에 붙이거나 :PluginUpdate 명령을 사용하십시오
+   " :PluginSearch foo - foo에 대해 검색; `!`를 뒤에 붙여 로컬 캐시를 새로고침하십시오
+   " :PluginClean      - 사용하지 않는 플러그인의 삭제를 확인; `!`를 붙여 자동 삭제를 승인하십시오
    "
    " see :h vundle for more details or wiki for FAQ
-   " Put your non-Plugin stuff after this line
+   " 더 자세한 내용은 :h vundle 문서나 wiki의 FAQ를 확인하십시오
+   " 다음 줄부터 플러그인이 아닌 내용을 넣으십시오
    ```
 
 4. 플러그인 설치:
