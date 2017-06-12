@@ -1,285 +1,283 @@
-*vundle.txt*              Vundle, Vim í”ŒëŸ¬ê·¸ì¸ ë§¤ë‹ˆì €.             *vundle*
+*vundle.txt*              Vundle, Vim ÇÃ·¯±×ÀÎ ¸Å´ÏÀú.             *vundle*
 
                               VUNDLE MANUAL
 
-1. Vundleì´ëž€                                      |vundle-about|
-2. ë¹ ë¥¸ ì‹œìž‘                                         |vundle-quickstart|
-3. í”ŒëŸ¬ê·¸ì¸                                          |vundle-plugins|
-  3.1. í”ŒëŸ¬ê·¸ì¸ í™˜ê²½ì„¤ì •                               |vundle-plugins-configure|
-  3.2. URI ì§€ì›                                     |vundle-plugins-uris|
-  3.3. í”ŒëŸ¬ê·¸ì¸ ì„¤ì¹˜                                  |vundle-plugins-install|
-  3.4. í”ŒëŸ¬ê·¸ì¸ ì—…ë°ì´íŠ¸                               |vundle-plugins-update|
-  3.5. í”ŒëŸ¬ê·¸ì¸ ê²€ìƒ‰                                  |vundle-plugins-search|
-  3.6. í”ŒëŸ¬ê·¸ì¸ ë¦¬ìŠ¤íŠ¸                                 |vundle-plugins-list|
-  3.7. í”ŒëŸ¬ê·¸ì¸ ì •ë¦¬                                  |vundle-plugins-cleanup|
-4. Interactive ëª¨ë“œ                                 |vundle-interactive|
-5. ë‹¨ì¶•í‚¤                                           |vundle-keymappings|
-6. ì˜µì…˜                                            |vundle-options|
-7. í”ŒëŸ¬ê·¸ì¸ ì¸í„°íŽ˜ì´ìŠ¤ ìˆ˜ì •                             |vundle-interface-change|
+1. VundleÀÌ¶õ                                      |vundle-about|
+2. ºü¸¥ ½ÃÀÛ                                         |vundle-quickstart|
+3. ÇÃ·¯±×ÀÎ                                          |vundle-plugins|
+  3.1. ÇÃ·¯±×ÀÎ È¯°æ¼³Á¤                               |vundle-plugins-configure|
+  3.2. URI Áö¿ø                                     |vundle-plugins-uris|
+  3.3. ÇÃ·¯±×ÀÎ ¼³Ä¡                                  |vundle-plugins-install|
+  3.4. ÇÃ·¯±×ÀÎ ¾÷µ¥ÀÌÆ®                               |vundle-plugins-update|
+  3.5. ÇÃ·¯±×ÀÎ °Ë»ö                                  |vundle-plugins-search|
+  3.6. ÇÃ·¯±×ÀÎ ¸®½ºÆ®                                 |vundle-plugins-list|
+  3.7. ÇÃ·¯±×ÀÎ Á¤¸®                                  |vundle-plugins-cleanup|
+4. Interactive ¸ðµå                                 |vundle-interactive|
+5. ´ÜÃàÅ°                                           |vundle-keymappings|
+6. ¿É¼Ç                                            |vundle-options|
+7. ÇÃ·¯±×ÀÎ ÀÎÅÍÆäÀÌ½º ¼öÁ¤                             |vundle-interface-change|
 
 =============================================================================
-1. VUNDLEì´ëž€ ~
+1. VUNDLEÀÌ¶õ ~
                                                                *vundle-about*
 
-Vundleì€ Vim bundle ì˜ ì•½ìžë¡œ Vim í”ŒëŸ¬ê·¸ì¸ ë§¤ë‹ˆì €ìž…ë‹ˆë‹¤.
+VundleÀº Vim bundle ÀÇ ¾àÀÚ·Î Vim ÇÃ·¯±×ÀÎ ¸Å´ÏÀúÀÔ´Ï´Ù.
 
-Vundleì€ ë‹¤ìŒ ê¸°ëŠ¥ë“¤ì„ ì œê³µí•©ë‹ˆë‹¤.
+VundleÀº ´ÙÀ½ ±â´ÉµéÀ» Á¦°øÇÕ´Ï´Ù.
 
-  - `.vimrc`ì— ì§ì ‘ í”ŒëŸ¬ê·¸ì¸ë“¤ì˜ ê¸°ë¡ì„ ë‚¨ê¸°ê³  í™˜ê²½ì„¤ì •í•˜ê¸°
-  - í”ŒëŸ¬ê·¸ì¸ë“¤ì„ ì„¤ì¹˜í•˜ê¸° (scripts/bundle ì™€ ê°™ìŒ)
-  - í”ŒëŸ¬ê·¸ì¸ë“¤ì„ ì—…ë°ì´íŠ¸í•˜ê¸°
-  - ì‚¬ìš© ê°€ëŠ¥í•œ Vim scriptsë¥¼ ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰í•˜ê¸°
-  - ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” í”ŒëŸ¬ê·¸ì¸ë“¤ì„ ì •ë¦¬í•˜ê¸°
-  - interactive ëª¨ë“œì—ì„œ ìœ„ ê¸°ëŠ¥ë“¤ì„ í•˜ë‚˜ì˜ í‚¤ ë¡œ ì‹¤í–‰í•˜ê¸°
+  - `.vimrc`¿¡ Á÷Á¢ ÇÃ·¯±×ÀÎµéÀÇ ±â·ÏÀ» ³²±â°í È¯°æ¼³Á¤ÇÏ±â
+  - ÇÃ·¯±×ÀÎµéÀ» ¼³Ä¡ÇÏ±â (scripts/bundle ¿Í °°À½)
+  - ÇÃ·¯±×ÀÎµéÀ» ¾÷µ¥ÀÌÆ®ÇÏ±â
+  - »ç¿ë °¡´ÉÇÑ Vim scripts¸¦ ÀÌ¸§À¸·Î °Ë»öÇÏ±â
+  - »ç¿ëÇÏÁö ¾Ê´Â ÇÃ·¯±×ÀÎµéÀ» Á¤¸®ÇÏ±â
+  - interactive ¸ðµå¿¡¼­ À§ ±â´ÉµéÀ» ÇÏ³ªÀÇ Å° ·Î ½ÇÇàÇÏ±â
 
-Vundleì€ ìžë™ìœ¼ë¡œ ë‹¤ìŒì„ ìˆ˜í–‰í•©ë‹ˆë‹¤.
+VundleÀº ÀÚµ¿À¸·Î ´ÙÀ½À» ¼öÇàÇÕ´Ï´Ù.
 
-  - ì„¤ì¹˜ëœ ìŠ¤í¬ë¦½íŠ¸ë“¤ì˜ runtime ê²½ë¡œë¥¼ ê´€ë¦¬í•©ë‹ˆë‹¤
-  - ì„¤ì¹˜ ë° ì—…ë°ì´íŠ¸ í›„ ë„ì›€ë§ íƒœê·¸ë¥¼ ìž¬ìƒì„±í•©ë‹ˆë‹¤
+  - ¼³Ä¡µÈ ½ºÅ©¸³Æ®µéÀÇ runtime °æ·Î¸¦ °ü¸®ÇÕ´Ï´Ù
+  - ¼³Ä¡ ¹× ¾÷µ¥ÀÌÆ® ÈÄ µµ¿ò¸» ÅÂ±×¸¦ Àç»ý¼ºÇÕ´Ï´Ù
 
-Vundleì˜ ê²€ìƒ‰ ê¸°ëŠ¥ì€ http://vim-scripts.org ì„ ì°¸ê³ í•´ ì‚¬ìš© ê°€ëŠ¥í•œ ëª¨ë“  Vim scriptë“¤ì˜
-ë¦¬ìŠ¤íŠ¸ë¥¼ ì œê³µí•©ë‹ˆë‹¤
+VundleÀÇ °Ë»ö ±â´ÉÀº http://vim-scripts.org À» Âü°íÇØ »ç¿ë °¡´ÉÇÑ ¸ðµç Vim scriptµéÀÇ
+¸®½ºÆ®¸¦ Á¦°øÇÕ´Ï´Ù
 
-Vundleì€ í˜„ìž¬ ì¸í„°íŽ˜ì´ìŠ¤ ìˆ˜ì • ì¤‘ìž…ë‹ˆë‹¤. ìžì„¸í•œ ë‚´ìš©ì€ |vundle-interface-change|ë¥¼
-í™•ì¸í•˜ì‹­ì‹œì˜¤.
+VundleÀº ÇöÀç ÀÎÅÍÆäÀÌ½º ¼öÁ¤ ÁßÀÔ´Ï´Ù. ÀÚ¼¼ÇÑ ³»¿ëÀº |vundle-interface-change|¸¦
+È®ÀÎÇÏ½Ê½Ã¿À.
 
 =============================================================================
-2. ë¹ ë¥¸ ì‹œìž‘ ~
+2. ºü¸¥ ½ÃÀÛ ~
                                                           *vundle-quickstart*
 
-1. ì‹œìž‘í•˜ê¸°:
+1. ½ÃÀÛÇÏ±â:
 
-  Vundleì„ ì„¤ì¹˜í•˜ê¸° ìœ„í•´ì„  Gitì´ í•„ìš”í•©ë‹ˆë‹¤. ì„¤ì¹˜ ê³¼ì •ì—ì„œ ê°ê°ì˜ ì €ìž¥ì†Œë¥¼
-  ~/.vim/bundle/ ê²½ë¡œì— ê¸°ë³¸ê°’ìœ¼ë¡œ git cloneí•©ë‹ˆë‹¤. ê²€ìƒ‰ ê¸°ëŠ¥ì„ ìœ„í•´ Curlì´ í•„ìš”í•©ë‹ˆë‹¤.
+  VundleÀ» ¼³Ä¡ÇÏ±â À§ÇØ¼± GitÀÌ ÇÊ¿äÇÕ´Ï´Ù. ¼³Ä¡ °úÁ¤¿¡¼­ °¢°¢ÀÇ ÀúÀå¼Ò¸¦
+  ~/.vim/bundle/ °æ·Î¿¡ ±âº»°ªÀ¸·Î git cloneÇÕ´Ï´Ù. °Ë»ö ±â´ÉÀ» À§ÇØ CurlÀÌ ÇÊ¿äÇÕ´Ï´Ù.
 
                                                              *vundle-windows*
-  Windows ì‚¬ìš©ìžë¼ë©´, ë‹¤ìŒì˜ ìœ„í‚¤ ë¬¸ì„œë¥¼ ì°¸ì¡°í•˜ì‹­ì‹œì˜¤.
+  Windows »ç¿ëÀÚ¶ó¸é, ´ÙÀ½ÀÇ À§Å° ¹®¼­¸¦ ÂüÁ¶ÇÏ½Ê½Ã¿À.
   https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows.
 
                                                                  *vundle-faq*
-  ë§Œì•½ ì–´ë–¤ ë¬¸ì œë¼ë„ ë°œìƒí•œë‹¤ë©´, ìžì£¼ ë¬»ëŠ” ì§ˆë¬¸ì— ë„ì›€ì„ ìš”ì²­í•˜ì‹­ì‹œì˜¤.
+  ¸¸¾à ¾î¶² ¹®Á¦¶óµµ ¹ß»ýÇÑ´Ù¸é, ÀÚÁÖ ¹¯´Â Áú¹®¿¡ µµ¿òÀ» ¿äÃ»ÇÏ½Ê½Ã¿À.
   https://github.com/VundleVim/Vundle.vim/wiki
 
-2. Vundle ì„¤ì¹˜í•˜ê¸°:
+2. Vundle ¼³Ä¡ÇÏ±â:
 >
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 <
-3. ë²ˆë“¤ ì„¤ì •í•˜ê¸°:
+3. ¹øµé ¼³Á¤ÇÏ±â:
 
-  Vundleì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ë‹¤ìŒì„ .vimrc íŒŒì¼ì˜ ì²« ì¤„ì— ë¶™ì—¬ë„£ìœ¼ì‹­ì‹œì˜¤.
-  í•„ìš” ì—†ëŠ” í”ŒëŸ¬ê·¸ì¸ë“¤ì„ ì‚­ì œí•˜ì‹­ì‹œì˜¤. ë‹¤ìŒì€ ì˜ˆì‹œìž…ë‹ˆë‹¤.
+  VundleÀ» »ç¿ëÇÏ±â À§ÇØ ´ÙÀ½À» .vimrc ÆÄÀÏÀÇ Ã¹ ÁÙ¿¡ ºÙ¿©³ÖÀ¸½Ê½Ã¿À.
+  ÇÊ¿ä ¾ø´Â ÇÃ·¯±×ÀÎµéÀ» »èÁ¦ÇÏ½Ê½Ã¿À. ´ÙÀ½Àº ¿¹½ÃÀÔ´Ï´Ù.
 >
-    set nocompatible              " Viì™€ í˜¸í™˜ ë¶ˆê°€ ì„¤ì •, í•„ìˆ˜
-    filetype off                  " í•„ìˆ˜
+    set nocompatible              " Vi¿Í È£È¯ ºÒ°¡ ¼³Á¤, ÇÊ¼ö
+    filetype off                  " ÇÊ¼ö
 
-    " Vundleì„ í¬í•¨ì‹œí‚¤ê¸° ìœ„í•´ runtime ê²½ë¡œë¥¼ ì„¤ì •í•˜ê³  ì´ˆê¸°í™”
+    " VundleÀ» Æ÷ÇÔ½ÃÅ°±â À§ÇØ runtime °æ·Î¸¦ ¼³Á¤ÇÏ°í ÃÊ±âÈ­
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
-    " ê¸°ì¡´ ê²½ë¡œ ëŒ€ì‹  Vundleì´ í”ŒëŸ¬ê·¸ì¸ì„ ì„¤ì¹˜í•  ê²½ë¡œë¥¼ ìž…ë ¥í•˜ì‹­ì‹œì˜¤.
+    " ±âÁ¸ °æ·Î ´ë½Å VundleÀÌ ÇÃ·¯±×ÀÎÀ» ¼³Ä¡ÇÒ °æ·Î¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À.
     "call vundle#begin('~/some/path/here')
 
-    " Vundleì´ ìŠ¤ìŠ¤ë¡œë¥¼ ê´€ë¦¬í•˜ë„ë¡ ì„¤ì •, í•„ìˆ˜
+    " VundleÀÌ ½º½º·Î¸¦ °ü¸®ÇÏµµ·Ï ¼³Á¤, ÇÊ¼ö
     Plugin 'VundleVim/Vundle.vim'
 
-    " ì•„ëž˜ëŠ” ì§€ì›ë˜ëŠ” ì—¬ëŸ¬ í˜•ì‹ë“¤ì˜ ì˜ˆì‹œìž…ë‹ˆë‹¤
-    " í”ŒëŸ¬ê·¸ì¸ ëª…ë ¹ì–´ë¥¼ vundle#begin/end ì‚¬ì´ì— ì¶”ê°€í•˜ì‹­ì‹œì˜¤
-    " GitHub ì €ìž¥ì†Œì— ìžˆëŠ” í”ŒëŸ¬ê·¸ì¸
+    " ¾Æ·¡´Â Áö¿øµÇ´Â ¿©·¯ Çü½ÄµéÀÇ ¿¹½ÃÀÔ´Ï´Ù
+    " ÇÃ·¯±×ÀÎ ¸í·É¾î¸¦ vundle#begin/end »çÀÌ¿¡ Ãß°¡ÇÏ½Ê½Ã¿À
+    " GitHub ÀúÀå¼Ò¿¡ ÀÖ´Â ÇÃ·¯±×ÀÎ
     Plugin 'tpope/vim-fugitive'
-    " http://vim-scripts.org/vim/scripts.html ì— ìžˆëŠ” í”ŒëŸ¬ê·¸ì¸
-    " 'L9' í”ŒëŸ¬ê·¸ì¸
-    " GitHubì— í˜¸ìŠ¤íŠ¸ ë˜ì–´ìžˆì§€ ì•ŠëŠ” Git í”ŒëŸ¬ê·¸ì¸
+    " http://vim-scripts.org/vim/scripts.html ¿¡ ÀÖ´Â ÇÃ·¯±×ÀÎ
+    " 'L9' ÇÃ·¯±×ÀÎ
+    " GitHub¿¡ È£½ºÆ® µÇ¾îÀÖÁö ¾Ê´Â Git ÇÃ·¯±×ÀÎ
     Plugin 'git://git.wincent.com/command-t.git'
-    " ì‚¬ìš©í•˜ëŠ” ê¸°ê¸°ì˜ git ì €ìž¥ì†Œ ( ë‹¹ì‹ ë§Œì˜ í”ŒëŸ¬ê·¸ì¸ì„ ì‚¬ìš©í•  ë•Œ )
+    " »ç¿ëÇÏ´Â ±â±âÀÇ git ÀúÀå¼Ò ( ´ç½Å¸¸ÀÇ ÇÃ·¯±×ÀÎÀ» »ç¿ëÇÒ ¶§ )
     Plugin 'file:///home/gmarik/path/to/plugin'
-    " sparkup vim scriptëŠ” vim ì´ëž€ ì´ë¦„ì˜ ì €ìž¥ì†Œ í•˜ìœ„ ë””ë ‰í† ë¦¬ ë‚´ë¶€ì— ìžˆìŠµë‹ˆë‹¤.
-    " ì •í™•í•œ runtime ê²½ë¡œë¥¼ ìž…ë ¥í•˜ì‹­ì‹œì˜¤.
+    " sparkup vim script´Â vim ÀÌ¶õ ÀÌ¸§ÀÇ ÀúÀå¼Ò ÇÏÀ§ µð·ºÅä¸® ³»ºÎ¿¡ ÀÖ½À´Ï´Ù.
+    " Á¤È®ÇÑ runtime °æ·Î¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À.
     Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-    " L9ë¥¼ ì„¤ì¹˜í•˜ê³ , ë§Œì•½ ë‹¹ì‹ ì´ ë‹¤ë¥¸ ë²„ì „ì„ ì–´ë”˜ê°€ ì„¤ì¹˜í–ˆì„ ê²½ìš° ë°œìƒí•˜ëŠ” ì´ë¦„ ì¶©ëŒ ë¬¸ì œë¥¼ ë°©ì§€í•©ë‹ˆë‹¤
+    " L9¸¦ ¼³Ä¡ÇÏ°í, ¸¸¾à ´ç½ÅÀÌ ´Ù¸¥ ¹öÀüÀ» ¾îµò°¡ ¼³Ä¡ÇßÀ» °æ¿ì ¹ß»ýÇÏ´Â ÀÌ¸§ Ãæµ¹ ¹®Á¦¸¦ ¹æÁöÇÕ´Ï´Ù
     " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-    " ë‹¹ì‹ ì˜ ëª¨ë“  í”ŒëŸ¬ê·¸ì¸ì€ ë‹¤ìŒ ëª…ë ¹ì–´ ì´ì „ì— ì¶”ê°€ë˜ì–´ì•¼ í•©ë‹ˆë‹¤
-    call vundle#end()            " í•„ìˆ˜
-    filetype plugin indent on    " í•„ìˆ˜
-    " í”ŒëŸ¬ê·¸ì¸ì˜ ë“¤ì—¬ì“°ê¸° ë³€í™”ë¥¼ ë¬´ì‹œí•˜ë ¤ë©´, ëŒ€ì‹  ì´ ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•˜ì‹­ì‹œì˜¤:
+    " ´ç½ÅÀÇ ¸ðµç ÇÃ·¯±×ÀÎÀº ´ÙÀ½ ¸í·É¾î ÀÌÀü¿¡ Ãß°¡µÇ¾î¾ß ÇÕ´Ï´Ù
+    call vundle#end()            " ÇÊ¼ö
+    filetype plugin indent on    " ÇÊ¼ö
+    " ÇÃ·¯±×ÀÎÀÇ µé¿©¾²±â º¯È­¸¦ ¹«½ÃÇÏ·Á¸é, ´ë½Å ÀÌ ¸í·É¾î¸¦ »ç¿ëÇÏ½Ê½Ã¿À:
     "filetype plugin on
     "
-    " ê°„ë‹¨í•œ ë„ì›€ë§
-    " :PluginList       - ì„¤ì •ëœ í”ŒëŸ¬ê·¸ì¸ì˜ ë¦¬ìŠ¤íŠ¸
-    " :PluginInstall    - í”ŒëŸ¬ê·¸ì¸ ì„¤ì¹˜; ì—…ë°ì´íŠ¸ë¥¼ í•˜ë ¤ë©´ `!`ë¥¼ ë§ë¶™ì´ê±°ë‚˜ :PluginUpdate ëª…ë ¹ì„ ì‚¬ìš©í•˜ì‹­ì‹œì˜¤
-    " :PluginSearch foo - fooì— ëŒ€í•´ ê²€ìƒ‰; `!`ë¥¼ ë§ë¶™ì—¬ ë¡œì»¬ ìºì‹œë¥¼ ìƒˆë¡œê³ ì¹¨í•˜ì‹­ì‹œì˜¤
-    " :PluginClean      - ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” í”ŒëŸ¬ê·¸ì¸ì˜ ì‚­ì œë¥¼ í™•ì¸; `!`ë¥¼ ë¶™ì—¬ ìžë™ ì‚­ì œë¥¼ ìŠ¹ì¸í•˜ì‹­ì‹œì˜¤
+    " °£´ÜÇÑ µµ¿ò¸»
+    " :PluginList       - ¼³Á¤µÈ ÇÃ·¯±×ÀÎÀÇ ¸®½ºÆ®
+    " :PluginInstall    - ÇÃ·¯±×ÀÎ ¼³Ä¡; ¾÷µ¥ÀÌÆ®¸¦ ÇÏ·Á¸é `!`¸¦ µ¡ºÙÀÌ°Å³ª :PluginUpdate ¸í·ÉÀ» »ç¿ëÇÏ½Ê½Ã¿À
+    " :PluginSearch foo - foo¿¡ ´ëÇØ °Ë»ö; `!`¸¦ µ¡ºÙ¿© ·ÎÄÃ Ä³½Ã¸¦ »õ·Î°íÄ§ÇÏ½Ê½Ã¿À
+    " :PluginClean      - »ç¿ëÇÏÁö ¾Ê´Â ÇÃ·¯±×ÀÎÀÇ »èÁ¦¸¦ È®ÀÎ; `!`¸¦ ºÙ¿© ÀÚµ¿ »èÁ¦¸¦ ½ÂÀÎÇÏ½Ê½Ã¿À
     "
-    " ë” ìžì„¸í•œ ë‚´ìš©ì€ :h vundle ë¬¸ì„œë‚˜ wikiì˜ FAQë¥¼ í™•ì¸í•˜ì‹­ì‹œì˜¤
-    " ë‹¤ìŒ ì¤„ë¶€í„° í”ŒëŸ¬ê·¸ì¸ì´ ì•„ë‹Œ ë‚´ìš©ì„ ë„£ìœ¼ì‹­ì‹œì˜¤
+    " ´õ ÀÚ¼¼ÇÑ ³»¿ëÀº :h vundle ¹®¼­³ª wikiÀÇ FAQ¸¦ È®ÀÎÇÏ½Ê½Ã¿À
+    " ´ÙÀ½ ÁÙºÎÅÍ ÇÃ·¯±×ÀÎÀÌ ¾Æ´Ñ ³»¿ëÀ» ³ÖÀ¸½Ê½Ã¿À
 
-4. ì„¤ì •ëœ ë²ˆë“¤ ì„¤ì¹˜í•˜ê¸°:
+4. ¼³Á¤µÈ ¹øµé ¼³Ä¡ÇÏ±â:
 
-  vimì„ ì¼  í›„ ë‹¤ìŒì„ ì‹¤í–‰í•˜ì‹­ì‹œì˜¤
+  vimÀ» ÄÒ ÈÄ ´ÙÀ½À» ½ÇÇàÇÏ½Ê½Ã¿À
 >
     :PluginInstall
 <
-  ëª…ë ¹ì¤„ì—ì„œ ì„¤ì¹˜:
+  ¸í·ÉÁÙ¿¡¼­ ¼³Ä¡:
 >
     vim +PluginInstall +qall
 
 =============================================================================
-3. í”ŒëŸ¬ê·¸ì¸ ~
+3. ÇÃ·¯±×ÀÎ ~
                                                              *vundle-plugins*
 
-3.1 í”ŒëŸ¬ê·¸ì¸ ì„¤ì •í•˜ê¸° ~
+3.1 ÇÃ·¯±×ÀÎ ¼³Á¤ÇÏ±â ~
                                          *vundle-plugins-configure* *:Plugin*
 
-Vundleì€ `.vimrc`ì—ì„œ `Plugin` ëª…ë ¹ì„ í†µí•´ ì„¤ì •í•˜ê³  ì‹¶ì€ í”ŒëŸ¬ê·¸ì¸ì„ ê¸°ë¡í•©ë‹ˆë‹¤.
-ê° `Plugin` ëª…ë ¹ì€ Vundleì´ ìŠ¤í¬ë¦½íŠ¸ë¥¼ |runtimepath|ì— ì¶”ê°€í•˜ê³  ì‹œìž‘ ì‹œ í™œì„±í™”í•˜ë„ë¡ ì•Œë ¤ì¤ë‹ˆë‹¤.
-ì£¼ì„ ì²˜ë¦¬ë‚˜ ëª…ë ¹ì¤„ ì‚­ì œë¥¼ í†µí•´ `Plugin`ì„ ë¹„í™œì„±í™”í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+VundleÀº `.vimrc`¿¡¼­ `Plugin` ¸í·ÉÀ» ÅëÇØ ¼³Á¤ÇÏ°í ½ÍÀº ÇÃ·¯±×ÀÎÀ» ±â·ÏÇÕ´Ï´Ù.
+°¢ `Plugin` ¸í·ÉÀº VundleÀÌ ½ºÅ©¸³Æ®¸¦ |runtimepath|¿¡ Ãß°¡ÇÏ°í ½ÃÀÛ ½Ã È°¼ºÈ­ÇÏµµ·Ï ¾Ë·ÁÁÝ´Ï´Ù.
+ÁÖ¼® Ã³¸®³ª ¸í·ÉÁÙ »èÁ¦¸¦ ÅëÇØ `Plugin`À» ºñÈ°¼ºÈ­ÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-ê° `Plugin` ëª…ë ¹ì€ ìŠ¤í¬ë¦½íŠ¸ë¥¼ ê°€ë¦¬í‚¤ëŠ” URIë¥¼ ê°€ì§‘ë‹ˆë‹¤.
-ì–´ë–¤ ì£¼ì„ë„ ëª…ë ¹ê³¼ ê°™ì€ ì¤„ì— ìž‘ì„± ë  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë‹¤ìŒì€ ì˜ˆì‹œìž…ë‹ˆë‹¤:
+°¢ `Plugin` ¸í·ÉÀº ½ºÅ©¸³Æ®¸¦ °¡¸®Å°´Â URI¸¦ °¡Áý´Ï´Ù.
+¾î¶² ÁÖ¼®µµ ¸í·É°ú °°Àº ÁÙ¿¡ ÀÛ¼º µÉ ¼ö ¾ø½À´Ï´Ù. ´ÙÀ½Àº ¿¹½ÃÀÔ´Ï´Ù:
 >
   Plugin 'git_URI'
 
-`Plugin` ëª…ë ¹ì–´ëŠ” ì„ íƒì ìœ¼ë¡œ URI ë’¤ì— ë‘ ë²ˆì§¸ ì¸ìžë¥¼ ê°€ì§ˆ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
-ë”•ì…”ë„ˆë¦¬ í˜•íƒœì—¬ì•¼ í•˜ê³ , URIì™€ ì‰¼í‘œë¡œ êµ¬ë¶„ë˜ì–´ì•¼ í•©ë‹ˆë‹¤. ë”•ì…”ë„ˆë¦¬ì˜ ê° í‚¤-ê°’ ìŒì€ í™˜ê²½ì„¤ì • ì˜µì…˜ìž…ë‹ˆë‹¤.
+`Plugin` ¸í·É¾î´Â ¼±ÅÃÀûÀ¸·Î URI µÚ¿¡ µÎ ¹øÂ° ÀÎÀÚ¸¦ °¡Áú ¼ö ÀÖ½À´Ï´Ù.
+µñ¼Å³Ê¸® ÇüÅÂ¿©¾ß ÇÏ°í, URI¿Í ½°Ç¥·Î ±¸ºÐµÇ¾î¾ß ÇÕ´Ï´Ù. µñ¼Å³Ê¸®ÀÇ °¢ Å°-°ª ½ÖÀº È¯°æ¼³Á¤ ¿É¼ÇÀÔ´Ï´Ù.
 
-ë‹¤ìŒì˜ ìŠ¤í¬ë¦½íŠ¸ ì „ì— ìž‘ì„±ë˜ëŠ” í™˜ê²½ì„¤ì • ì˜µì…˜ë“¤ì€ ì‚¬ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤.
+´ÙÀ½ÀÇ ½ºÅ©¸³Æ® Àü¿¡ ÀÛ¼ºµÇ´Â È¯°æ¼³Á¤ ¿É¼ÇµéÀº »ç¿ë °¡´ÉÇÕ´Ï´Ù.
 
-'rtp' ì˜µì…˜
+'rtp' ¿É¼Ç
 ----------------
 
-ì €ìž¥ì†Œ ë‚´ vim í”ŒëŸ¬ê·¸ì¸ì´ ì¡´ìž¬í•˜ëŠ” ê²½ë¡œë¥¼ ëª…ì‹œí•©ë‹ˆë‹¤. (ì €ìž¥ì†Œì˜ root ë””ë ‰í† ë¦¬ë¶€í„° ìƒëŒ€ ê²½ë¡œ)
-ì´ ì˜µì…˜ì€ |runtimepath|ì— ì¶”ê°€ë  ê²½ë¡œë¥¼ ê²°ì •í•©ë‹ˆë‹¤.
+ÀúÀå¼Ò ³» vim ÇÃ·¯±×ÀÎÀÌ Á¸ÀçÇÏ´Â °æ·Î¸¦ ¸í½ÃÇÕ´Ï´Ù. (ÀúÀå¼ÒÀÇ root µð·ºÅä¸®ºÎÅÍ »ó´ë °æ·Î)
+ÀÌ ¿É¼ÇÀº |runtimepath|¿¡ Ãß°¡µÉ °æ·Î¸¦ °áÁ¤ÇÕ´Ï´Ù.
 
-ì˜ˆì‹œ:
+¿¹½Ã:
 >
   Plugin 'git_URI', {'rtp': 'some/subdir/'}
 
-ì´ ì˜µì…˜ì€ í•˜ìœ„ ë””ë ‰í† ë¦¬ì— vim í”ŒëŸ¬ê·¸ì¸ì„ ë„£ì€ git ì €ìž¥ì†Œì—ì„œ ì‚¬ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤.
+ÀÌ ¿É¼ÇÀº ÇÏÀ§ µð·ºÅä¸®¿¡ vim ÇÃ·¯±×ÀÎÀ» ³ÖÀº git ÀúÀå¼Ò¿¡¼­ »ç¿ë °¡´ÉÇÕ´Ï´Ù.
 
-'name' ì˜µì…˜
+'name' ¿É¼Ç
 -----------------
 
-ì„¤ì •ëœ ìŠ¤í¬ë¦½íŠ¸ì˜ ë¡œì»¬ ë³µì œë³¸ì´ ê°€ì§ˆ ê²½ë¡œì˜ ì´ë¦„ì„ ëª…ì‹œí•©ë‹ˆë‹¤.
+¼³Á¤µÈ ½ºÅ©¸³Æ®ÀÇ ·ÎÄÃ º¹Á¦º»ÀÌ °¡Áú °æ·ÎÀÇ ÀÌ¸§À» ¸í½ÃÇÕ´Ï´Ù.
 
-ì˜ˆì‹œ:
+¿¹½Ã:
 >
   Plugin 'git_URI', {'name': 'newPluginName'}
 
-ì´ ì˜µì…˜ì€ Vundleì´ ê°™ì€ ê²½ë¡œì— ë³µì œí•˜ë ¤ í•  ë•Œ ë°œìƒí•˜ëŠ” í”ŒëŸ¬ê·¸ì¸ ê°„ì˜ ì´ë¦„ ì¶©ëŒì„ ë°©ì§€í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
-ë˜í•œ ì¶”ê°€ì ì¸ ë‹¨ê³„ì˜ ì»¤ìŠ¤í„°ë§ˆì´ì§•ì„ ì œê³µí•©ë‹ˆë‹¤.
+ÀÌ ¿É¼ÇÀº VundleÀÌ °°Àº °æ·Î¿¡ º¹Á¦ÇÏ·Á ÇÒ ¶§ ¹ß»ýÇÏ´Â ÇÃ·¯±×ÀÎ °£ÀÇ ÀÌ¸§ Ãæµ¹À» ¹æÁöÇÒ ¼ö ÀÖ½À´Ï´Ù.
+¶ÇÇÑ Ãß°¡ÀûÀÎ ´Ü°èÀÇ Ä¿½ºÅÍ¸¶ÀÌÂ¡À» Á¦°øÇÕ´Ï´Ù.
 
-'pinned' ì˜µì…˜
+'pinned' ¿É¼Ç
 -------------------
 
-ë§Œì•½ ì˜µì…˜ í”Œëž˜ê·¸ê°€ 1ë¡œ ì„¤ì •ë˜ì–´ ìžˆë‹¤ë©´, ì´ë¯¸ `bundles` ë””ë ‰í† ë¦¬ ë‚´ì— ì¡´ìž¬í•˜ëŠ” í”ŒëŸ¬ê·¸ì¸ì„
-|runtimepath|ì— ì¶”ê°€í•˜ëŠ” ë™ì•ˆ Vundleì´ í”ŒëŸ¬ê·¸ì¸ì—ì„œ ì–´ë–¤ ëª…ë ¹ë„ ìˆ˜í–‰í•˜ì§€ ëª»í•˜ë„ë¡ í•©ë‹ˆë‹¤.
+¸¸¾à ¿É¼Ç ÇÃ·¡±×°¡ 1·Î ¼³Á¤µÇ¾î ÀÖ´Ù¸é, ÀÌ¹Ì `bundles` µð·ºÅä¸® ³»¿¡ Á¸ÀçÇÏ´Â ÇÃ·¯±×ÀÎÀ»
+|runtimepath|¿¡ Ãß°¡ÇÏ´Â µ¿¾È VundleÀÌ ÇÃ·¯±×ÀÎ¿¡¼­ ¾î¶² ¸í·Éµµ ¼öÇàÇÏÁö ¸øÇÏµµ·Ï ÇÕ´Ï´Ù.
 
 For example:
 >
   Plugin 'mylocalplugin', {'pinned': 1}
 
-ì´ ê¸°ëŠ¥ì€ ì‚¬ìš©ìžê°€ Git ì´ì™¸ì˜ ë²„ì „ ê´€ë¦¬ ì‹œìŠ¤í…œì„ Vundleê³¼ í•¨ê»˜ í¬í•¨ì‹œí‚¬ ìˆ˜ ìžˆë„ë¡ í•´ì£¼ì§€ë§Œ,
-ì‚¬ìš©ìžëŠ” ì €ìž¥ì†Œë¥¼ ë³µì œí•˜ê³  ìµœì‹  ìƒíƒœë¥¼ ìœ ì§€í•´ì•¼ í•©ë‹ˆë‹¤.
-ë˜í•œ ì‚¬ìš©ìžê°€ Vundleì´ ì˜ˆì „ì— ì—…ë°ì´íŠ¸í•œ í”ŒëŸ¬ê·¸ì¸ì˜ ë²„ì „ì— ë‚¨ì•„ìžˆì„ ìˆ˜ ìžˆë„ë¡ í•©ë‹ˆë‹¤.
+ÀÌ ±â´ÉÀº »ç¿ëÀÚ°¡ Git ÀÌ¿ÜÀÇ ¹öÀü °ü¸® ½Ã½ºÅÛÀ» Vundle°ú ÇÔ²² Æ÷ÇÔ½ÃÅ³ ¼ö ÀÖµµ·Ï ÇØÁÖÁö¸¸,
+»ç¿ëÀÚ´Â ÀúÀå¼Ò¸¦ º¹Á¦ÇÏ°í ÃÖ½Å »óÅÂ¸¦ À¯ÁöÇØ¾ß ÇÕ´Ï´Ù.
+¶ÇÇÑ »ç¿ëÀÚ°¡ VundleÀÌ ¿¹Àü¿¡ ¾÷µ¥ÀÌÆ®ÇÑ ÇÃ·¯±×ÀÎÀÇ ¹öÀü¿¡ ³²¾ÆÀÖÀ» ¼ö ÀÖµµ·Ï ÇÕ´Ï´Ù.
 
-URIëŠ” ë‹¤ë¥¸ í”ŒëŸ¬ê·¸ì¸ì—ë„ ê°™ì€ ê²ƒìœ¼ë¡œ ì·¨ê¸‰ë˜ê³ ,ê·¸ ë§ˆì§€ë§‰ ë‹¨ê³„ëŠ” |runtimepath|ì— ì¶”ê°€ë˜ëŠ” ê²ƒìž„ì„
-ì£¼ì˜í•´ì£¼ì‹­ì‹œì˜¤. í˜¼ë™ì„ ë°©ì§€í•˜ê¸° ìœ„í•´ ì´ ì˜µì…˜ í”Œëž˜ê·¸ë¥¼ single word URIì—ë§Œ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ë°”ëžŒì§í•©ë‹ˆë‹¤.
+URI´Â ´Ù¸¥ ÇÃ·¯±×ÀÎ¿¡µµ °°Àº °ÍÀ¸·Î Ãë±ÞµÇ°í,±× ¸¶Áö¸· ´Ü°è´Â |runtimepath|¿¡ Ãß°¡µÇ´Â °ÍÀÓÀ»
+ÁÖÀÇÇØÁÖ½Ê½Ã¿À. È¥µ¿À» ¹æÁöÇÏ±â À§ÇØ ÀÌ ¿É¼Ç ÇÃ·¡±×¸¦ single word URI¿¡¸¸ »ç¿ëÇÏ´Â °ÍÀÌ ¹Ù¶÷Á÷ÇÕ´Ï´Ù.
 
-3.2 SUPPORTED URIS ~
+3.2 URI Áö¿ø ~
                                                         *vundle-plugins-uris*
 
-`Vundle` integrates very well with both GitHub and vim-scripts.org
-(http://vim-scripts.org/vim/scripts.html) allowing short URIs. It also allows
-the use of any URI `git` recognizes. In all of the following cases (except
-local) the 'https' protocol is used, see Vundle's options to override this.
+`Vundle`Àº GitHub¿Í vim-scripts.org(http://vim-scripts.org/vim/scripts.html)
+ÀÌ ÅëÇÕµÇ¾î Ãà¼Ò URI¸¦ Áö¿øÇÕ´Ï´Ù. ¶ÇÇÑ VundleÀº GitÀÌ ÀÎ½ÄÇÒ ¼ö ÀÖ´Â
+¸ðµç Á¾·ùÀÇ URI¸¦ »ç¿ë ÇÒ ¼ö ÀÖ½À´Ï´Ù. local ÁÖ¼Ò¸¦ Á¦¿ÜÇÑ ¸ðµç »óÈ²¿¡¼­
+¡®https¡¯ ÇÁ·ÎÅäÄÝÀÌ »ç¿ëµË´Ï´Ù. ÀÌ¸¦ Áß´ÜÇÏ·Á¸é VundleÀÇ ¿É¼ÇÀ» È®ÀÎÇÏ¼¼¿ä.
 
-More information on `git`'s protocols can be found at:
+GitÀÇ ÇÁ·ÎÅäÄÝ¿¡ °üÇÑ ´õ ¸¹Àº Á¤º¸´Â ´ÙÀ½ ÁÖ¼Ò¿¡¼­ È®ÀÎ ÇÒ ¼ö ÀÖ½À´Ï´Ù:
 http://git-scm.com/book/ch4-1.html
 
 GitHub
 ------
-GitHub is used when a user/repo is passed to `Plugin`.
+GitHub´Â ¡®Plugin¡¯¿¡ user/repo°¡ ÀÔ·ÂµÇ¾úÀ» ¶§ »ç¿ëµË´Ï´Ù
 >
   Plugin 'VundleVim/Vundle.vim' => https://github.com/VundleVim/Vundle.vim
 
 Vim Scripts
 -----------
-Any single word without a slash '/' is assumed to be from Vim Scripts.
+¡®/¡¯¾ø´Â ÁÖ¼Ò´Â Vim Scripts³»¿¡ ÀÖ´Â °ÍÀ¸·Î °£ÁÖÇÕ´Ï´Ù.
 >
   Plugin 'ctrlp.vim' => https://github.com/vim-scripts/ctrlp.vim
 
-Other Git URIs
+±âÅ¸ Git URIs
 --------------
-No modification is performed on valid URIs that point outside the above
-URLs.
+À§ URLÀÇ ¿ÜºÎ¸¦ °¡¸®Å°´Â À¯È¿ÇÑ URI´Â ¾î¶°ÇÑ ¼öÁ¤µµ ÇÏÁö ¾Ê½À´Ï´Ù.
 >
   Plugin 'git://git.wincent.com/command-t.git'
 
-Local Plugins
+·ÎÄÃ Plugins
 -------------
-The git protocol supports local installation using the 'file://' protocol.
-This is handy when developing plugins locally. Follow the protocol with an
-absolute path to the script directory.
+Git ÇÁ·ÎÅäÄÝÀº 'file://'À» ÅëÇØ ·ÎÄÃ ¼³Ä¡¸¦ Áö¿øÇÕ´Ï´Ù.
+ÀÌ´Â PluginÀ» ·ÎÄÃ¿¡¼­ °³¹ßÇÒ¶§ ¸Å¿ì Æí¸®ÇÕ´Ï´Ù. script µð·ºÅä¸®¿¡¼­
+Àý´ë°æ·Î¸¦ ´ÙÀ½ ÇÁ·ÎÅäÄÝ¿¡ µû¶ó ÀÔ·ÂÇÏ½Ê½Ã¿À..
 >
   Plugin 'file:///path/from/root/to/plugin'
 
-3.3 INSTALLING PLUGINS ~
+3.3 PLUGINS ¼³Ä¡ ~
                                     *vundle-plugins-install* *:PluginInstall*
 >
   :PluginInstall
 
-Will install all plugins configured in your `.vimrc`. Newly installed
-plugins will be automatically enabled. Some plugins may require extra steps
-such as compilation or external programs, refer to their documentation.
+ÀÌ ¸í·É¾î´Â ¡®vimrc¡¯¿¡ ¼³Á¤µÈ ¸ðµç ÇÃ·¯±×ÀÎÀ» ¼³Ä¡ÇÕ´Ï´Ù.
+»õ·Î ¼³Ä¡µÈ ÇÃ·¯±×ÀÎ ÀÚµ¿ÀûÀ¸·Î È°¼ºÈ­µË´Ï´Ù. ¸î¸î ÇÃ·¯±×ÀÎÀº ÇØ´ç ÇÃ·¯±×ÀÎ
+¹®¼­¿¡¼­ ¸í½ÃÇÑ ÄÄÆÄÀÏÀÌ³ª ¿ÜºÎ ÇÁ·Î±×·¥°ú °°Àº Ãß°¡ÀûÀÎ ´Ü°è°¡ ÇÊ¿äÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-PluginInstall allows installation of plugins by name:
+PluginInstallÀº ÇÃ·¯±×ÀÎÀÇ ÀÌ¸§À» ÀÌ¿ëÇØ ¼³Ä¡ÇÒ ¼öµµ ÀÖ½À´Ï´Ù.:
 >
   :PluginInstall unite.vim
 
-Installs and activates unite.vim.
+unite.vimÀ» ¼³Ä¡ ¹× È°¼ºÈ­.
 
-PluginInstall also allows installation of several plugins separated by space.
+PluginInstallÀº º¹¼öÀÇ ÇÃ·¯±×ÀÎÀ» ¶ç¾î¾²±â¸¦ ÅëÇØ ºÐ¸®ÇØ¼­ ¼³Ä¡ÇÒ ¼ö ÀÖ½À´Ï´Ù.
 >
   :PluginInstall tpope/vim-surround tpope/vim-fugitive
 
-Installs both tpope/vim-surround and tpope/vim-fugitive from GitHub.
+tpope/vim-surround¿Í tpope/vim-fugitive µÑ´Ù GitHub¸¦ ÅëÇØ ¼³Ä¡
+´ç½ÅÀº TabÀ» ÅëÇØ ¾Ë°í ÀÖ´Â ½ºÅ©¸³Æ® script ÀÌ¸§À» ÀÚµ¿¿Ï¼º ÇÒ ¼öµµ ÀÖ½À´Ï´Ù.
+¸í½ÉÇÏ½Ê½Ã¿À. Áö±Ý±îÁö ¼³¸íÇÑ ¼³Ä¡´Â ¿µ±¸ÀûÀÌÁö ¾Ê½À´Ï´Ù.
+³¡³»±â À§ÇØ¼­´Â ´ç½ÅÀº ¹Ýµå½Ã ¡®Plugin 'unite.vim'À» ¡®.vimrc¡¯ÀÇ 
+¿Ã¹Ù¸¥ À§Ä¡¿¡ µÎ¾î¾ß VundleÀÌ ½ÃÀÛÇÒ¶§ ´ç½ÅÀÇ ÇÃ·¯±×ÀÎÀ» ·ÎµùÇÒ °ÍÀÔ´Ï´Ù.
 
-You can use Tab to auto-complete known script names.
-Note that the installation just described isn't permanent. To
-finish, you must put `Plugin 'unite.vim'` at the appropriate place in your
-`.vimrc` to tell Vundle to load the plugin at startup.
+ÇÃ·¯±×ÀÎ ¼³Ä¡°¡ ³¡³­ ÈÄ 'l' ('L'ÀÇ ¼Ò¹®ÀÚ)¸¦ ´­·¯ ¸í·É¾î ·Î±×¸¦ È®ÀÎÇØ
+¿¡·¯°¡ ¹ß»ýÇÏÁö ¾Ê¾Ò´ÂÁö È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-After installing plugins press 'l' (lowercase 'L') to see the log of commands
-if any errors occurred.
-
-3.4 UPDATING PLUGINS ~
+3.4 ÇÃ·¯±×ÀÎ ¾÷µ¥ÀÌÆ® ~
                     *vundle-plugins-update* *:PluginUpdate* *:PluginInstall!*
 >
   :PluginInstall!   " NOTE: bang(!)
 or >
   :PluginUpdate
 
-Installs or updates the configured plugins. Press 'u' after updates complete
-to see the change log of all updated bundles. Press 'l' (lowercase 'L') to
-see the log of commands if any errors occurred.
+¼³Á¤µÈ ÇÃ·¯±×ÀÎÀ» ¼³Ä¡ È¤Àº ¾÷µ¥ÀÌÆ®¸¦ ÇÕ´Ï´Ù. ¾÷µ¥ÀÌÆ®°¡ ¿Ï·áµÇ¸é
+¡®u¡¯¸¦ ´­·¯ ¾÷µ¥ÀÌÆ®µÈ ÇÃ·¯±×ÀÎµéÀÇ º¯°æ·Î±×¸¦ È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù. 
+'l' ('L'ÀÇ ¼Ò¹®ÀÚ)¸¦ ´­·¯ ¸í·É¾î ·Î±×¸¦ È®ÀÎÇØ ¿¡·¯°¡ ¹ß»ýÇÏÁö ¾Ê¾Ò´ÂÁö È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-To update specific plugins, write their names separated by space:
+Æ¯Á¤ÇÑ ÇÃ·¯±×ÀÎÀ» ¾÷µ¥ÀÌÆ® ÇÏ·Á¸é ¶ç¾î¾²±â¸¦ ÇÑ ÈÄ ÀÌ¸§À» ÀÔ·ÂÇÏ½Ê½Ã¿À.
 >
   :PluginInstall! vim-surround vim-fugitive
-or >
+È¤Àº >
   :PluginUpdate vim-surround vim-fugitive
 
-3.5 SEARCHING PLUGINS ~
+3.5 ÇÃ·¯±×ÀÎ °Ë»ö ~
                                       *vundle-plugins-search* *:PluginSearch*
 >
   :PluginSearch
 
-Search requires that `curl` be available on the system. The command searches
-Vim Scripts (http://vim-scripts.org/vim/scripts.html) for matching
-plugins. Results display in a new split window. For example:
+°Ë»öÀº ÇØ´ç ½Ã½ºÅÛ¿¡¼­ ¡®curl¡¯»ç¿ëÀÌ °¡´ÉÇØ¾ß ÇÕ´Ï´Ù. ÀÌ ¸í·É¾î´Â 
+Vim Scripts (http://vim-scripts.org/vim/scripts.html)¿¡¼­ ÀÏÄ¡ÇÏ´Â ÇÃ·¯±×ÀÎÀ»
+°Ë»öÇÕ´Ï´Ù. °á°ú´Â »õ·Î ºÐ¸®µÈ Ã¢¿¡ Ç¥½ÃµË´Ï´Ù. ¿¹¸¦ µé¾î:
 >
   PluginSearch foo
 
-displays:
+°á°ú Ãâ·Â:
 >
   "Search results for: foo
   Plugin 'MarkdownFootnotes'
@@ -287,38 +285,38 @@ displays:
   Plugin 'foo.vim'
 <
                                                              *:PluginSearch!*
-Alternatively, you can refresh the script list before searching by adding a
-bang to the command.
+ÀÌ°Í ´ë½Å ¸í·É¾î¿¡ ´À³¦Ç¥¸¦ ºÙÀÓÀ¸·Î½á ½ºÅ©¸³Æ® ¸®½ºÆ®¸¦ °Ë»öÀü¿¡
+»õ·Î°íÄ§À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
 >
   :PluginSearch! foo
 
-If the command is run without argument:
+¸¸¾à ÀÌ ¸í·É¾î¸¦ ÀÎÀÚ ¾øÀÌ ½ÇÇà½ÃÄ×´Ù¸é:
 >
   :PluginSearch!
 
-it will display all known plugins in the new split.
+ÀÌ´Â ¸ðµç ¾Ë°íÀÖ´Â ÇÃ·¯±×ÀÎµéÀ» »õ ºÐÇÒÃ¢¿¡ Ãâ·ÂÇÒ °ÍÀÔ´Ï´Ù.
 
-3.6 LISTING BUNDLES ~
+3.6 ÇÃ·¯±×ÀÎ ¸®½ºÆ® ~
                                           *vundle-plugins-list* *:PluginList*
 >
   :PluginList
 
-Displays a list of installed bundles.
+¼³Ä¡µÈ ÇÃ·¯±×ÀÎµéÀÇ ¸®½ºÆ®¸¦ Ãâ·ÂÇÕ´Ï´Ù.
 
-3.7 CLEANING UP ~
+3.7 Á¤¸®ÇÏ±â ~
                                       *vundle-plugins-cleanup* *:PluginClean*
 >
   :PluginClean
 
-Requests confirmation for the removal of all plugins no longered configured
-in your `.vimrc` but present in your bundle installation directory
+¡®.vimrc¡¯¿¡ ´õÀÌ»ó ¼³Á¤µÇ¾îÀÖÁö ¾ÊÀ¸³ª ÇöÀç ÇÃ·¯±×ÀÎ ¼³Ä¡ °æ·Î¿¡ ¼³Ä¡µÇ¾îÀÖ´Â ¸ðµç
+ÇÃ·¯±×ÀÎÀ» Á¦°ÅÇÏ±âÀ§ÇØ ½ÂÀÎÀ» ¿ä±¸ÇÕ´Ï´Ù.
 (default: `.vim/bundle/`).
 
                                                               *:PluginClean!*
 >
   :PluginClean!
 
-Automatically confirm removal of unused bundles.
+»ç¿ëÇÏÁö ¾Ê´Â ÇÃ·¯±×ÀÎ¿¡ ´ëÇÑ Á¦°Å¸¦ ÀÚµ¿À¸·Î ½ÂÀÎÇÕ´Ï´Ù.
 
 =============================================================================
 4. INTERACTIVE MODE ~
